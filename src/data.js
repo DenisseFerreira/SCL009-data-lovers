@@ -87,7 +87,7 @@ const computeStats = (data) => {
 window.computeStats = computeStats;
 
   
-const graficoEstadistica = (max, min, promedio) => {
+/*const graficoEstadistica = (max, min, promedio) => {
  
    
   google.charts.load('current', {'packages':['corechart']});
@@ -115,7 +115,7 @@ const graficoEstadistica = (max, min, promedio) => {
     chart.draw(data, options);
   } }
 
-  window.graficoEstadistica = graficoEstadistica; 
+  window.graficoEstadistica = graficoEstadistica; */
 
 const statsRol = (data) => {
   const rolStats = Math.round(data.length * 134 / 100);
@@ -125,12 +125,12 @@ const statsRol = (data) => {
 window.statsRol = statsRol;
 
   
-  const maxValue = Math.max(...statsCompute);
+  //const maxValue = Math.max(...statsCompute);
   // var max = Math.max(...arr); devuelve el mayor de cero o más números.
-  const minValue = Math.min(...statsCompute);
+ // const minValue = Math.min(...statsCompute);
   // var min = Math.min(...arr); devuelve el menor de cero o más números.
   
-  let average = Math.round(maxValue + minValue) / 2; //promedio
+  //let average = Math.round(maxValue + minValue) / 2; //promedio
   
 
 const searchChampion = (data, texto) => {

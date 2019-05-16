@@ -167,10 +167,11 @@ btnHome.addEventListener("click", ()=>{
         <p class="card-text"> El nivel mín de salud es de: ${statistic[1]} </p>
         <p class="card-text">El promedio de salud es de: ${statistic[2]} </p>
       </div>
-      <div id="chart_div" style="width: 500px; height: 300px; align=left";></div>
+      
     </div>
      `
-    window.graficoEstadistica(statistic[0], statistic[1],statistic[2]);
+    // <div id="chart_div" style="width: 500px; height: 300px; align=left";></div>
+    //window.graficoEstadistica(statistic[0], statistic[1],statistic[2]);
     document.getElementById("stats-compute").style.display = "block";
     document.getElementById("select-rol").style.display="none";
 
