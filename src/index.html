@@ -66,7 +66,7 @@
             <option id="lowDifficult" value="lowDifficult">Menor dificultad</option>
             <option id="highDifficult" value="highDifficult">Mayor dificultad</option>
           </select>
-          <p class="percent"></p><p id = "percent-rol" class="percents"> </p>
+          <p id = "percent-rol" class="percents"> </p>
         </div> <br>
         <p id="text-champion">ELIGE TU CAMPEÓN</p>
         <div id="stats-compute" class="compute-stats">
@@ -77,7 +77,7 @@
       <!-- mantengo todos los resultados -->
       <div id="container-result" class="row"> </div>
       <div id="container-modal"> </div>
-     
+        
       <footer>
           <div class="container-footer"> 
               <b> Copyright © WinnerLegends 2019 - Designed By Ferreira - Bravo. </b>
@@ -88,8 +88,9 @@
           </div>
         </footer>
         </div>
-        
-    
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript"></script>      
+             
 
   <!--Enlace a jquery, popper y boostrap-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -103,7 +104,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="./data/lol/lol.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"> </script>
+  <script src="./data/lol/lol.json"></script>
+
+  
+  <!-- <script src="./data/lol/lol.js"></script>-->
   <script src="data.js"></script>
   <script src="main.js"></script>
 

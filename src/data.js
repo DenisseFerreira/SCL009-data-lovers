@@ -86,12 +86,52 @@ const computeStats = (data) => {
 };
 window.computeStats = computeStats;
 
+  
+const graficoEstadistica = (max, min, promedio) => {
+ 
+   
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawVisualization);
+
+  function drawVisualization() {
+    // Some raw data (not necessarily accurate)
+    var data = google.visualization.arrayToDataTable([
+      ['Cantidad',  'Nivel'],
+      ['Minimo', min],
+      ['Promedio', promedio],
+      ['Máximo',  max ]
+
+    ]);
+
+    var options = {
+      title : 'Nivel de Salud de los campeones',
+      vAxis: {title: 'Nivel'},
+      hAxis: {title: 'Salud'},
+      seriesType: 'bars',
+      series: {2: {type: 'line'}}
+    };
+
+    var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  } }
+
+  window.graficoEstadistica = graficoEstadistica; 
+
 const statsRol = (data) => {
   const rolStats = Math.round(data.length * 134 / 100);
   return rolStats;
 };
 
 window.statsRol = statsRol;
+
+  
+  const maxValue = Math.max(...statsCompute);
+  // var max = Math.max(...arr); devuelve el mayor de cero o más números.
+  const minValue = Math.min(...statsCompute);
+  // var min = Math.min(...arr); devuelve el menor de cero o más números.
+  
+  let average = Math.round(maxValue + minValue) / 2; //promedio
+  
 
 const searchChampion = (data, texto) => {
   const resultChampion = data.filter( (element) => {
@@ -104,3 +144,5 @@ const searchChampion = (data, texto) => {
   return resultChampion;
 }
 window.searchChampion = searchChampion;
+
+
